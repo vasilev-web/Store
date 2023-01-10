@@ -1,0 +1,74 @@
+$white:    #fff;
+$gray-100: #f6f6f6;
+$gray-200: #cacad6;
+$gray-400: #93969e;
+$gray-600: #636872;
+$gray-800: #262e40;
+$gray-900: #0f1727;
+$black:    #000;
+
+$primary: #5ea136;
+$secondary: #5790b9;
+
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875;
+$font-size-lg:                $font-size-base * 1.25;
+
+$btn-link-color:              $secondary;
+$link-shade-percentage:       20%;
+$btn-link-hover-color:        shift-color($btn-link-color, $link-shade-percentage);
+$btn-link-disabled-color:     $gray-600;
+
+$body-bg:                     $white;
+$body-color:                  $gray-600;
+
+$font-family-base:            'Open Sans', sans-serif;
+$font-family-sans-serif:      'Oswald', sans-serif;
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+
+$font-weight-base:            $font-weight-normal;
+
+$line-height-base:            1.5;
+$line-height-sm:              1.25;
+$line-height-lg:              2;
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1254px, xxl: 1300px );
+
+@mixin scrollbar() {
+    /* Scrollbar */
+    &::-webkit-scrollbar {
+        width: .25rem;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: $white;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $secondary;
+        border-radius: 10px;
+        width: .25rem;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+
+    }
+
+    scrollbar-color: $gray-600 $white;
+    scrollbar-width: thin;
+}
